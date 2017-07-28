@@ -4,25 +4,28 @@
 # Correct the errors below that you spotted in task 1.
 
 def func1 val 
-  if val = 1
+  if val == 1
   return true
   else
   return false
   end
 end
   
-dif max a b
+def max a, b
   if a > b
       return a 
   else
-  b
+      return b
   end 
-end 
 end 
   
 def looper 
   for i in 1..10
-  puts i
+    if i == 10
+      return i
+    else 
+      puts i
+    end
   end
 end
  
@@ -33,6 +36,7 @@ if looper == 10
 else
   puts "looper failed"
   failures = failures + 1
+end
  
   
 if func1(3) == false
@@ -47,11 +51,11 @@ if max(100,1) == 100
   puts "max(100,1) passed"
 else
   puts "func1(3) failed"
-  failrues = failures + 1
+  failures = failures + 1
 end
 
   
-if failures 
+if failures > 0
   puts "Test Failed"
 else
   puts "Test Passed"
